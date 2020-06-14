@@ -11,11 +11,11 @@ import java.nio.ByteBuffer;
 import java.util.TimerTask;
 import java.util.function.Function;
 
-public class ServerSession implements MessageProcessor {
+public final class ServerSession implements MessageProcessor {
     public final Connection connection;
     private MessageProcessor messageHandler;
     private Function<Integer, Void> disconnectHandler;
-    private boolean keptAlive = false;
+    private volatile boolean keptAlive = false;
 
     public ServerSession(MessageProcessor messageHandler, SocketAddress address, Multiplexer io, Integer sessionId) throws IOException {
         this.messageHandler = messageHandler;
