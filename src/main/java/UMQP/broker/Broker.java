@@ -79,9 +79,7 @@ public final class Broker implements ConnectionHandler {
     }
 
     private void onConsumerMessage(ByteBuffer producerData) {
-        System.out.println("Consumer message, notifying processed");
         this.queueManager.tryGetPartition("test", 1).ifPresent(Partition::notifyProcessed);
-
         this.tryPollQueue();
     }
 

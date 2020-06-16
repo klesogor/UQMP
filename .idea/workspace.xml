@@ -4,8 +4,7 @@
     <list default="true" id="0bf05aab-7be9-46f7-8146-044ce73a092c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/UMQP/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UMQP/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/UMQP/consumer/Consumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UMQP/consumer/Consumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/UMQP/io/ClientSession.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UMQP/io/ClientSession.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UMQP/broker/Broker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UMQP/broker/Broker.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

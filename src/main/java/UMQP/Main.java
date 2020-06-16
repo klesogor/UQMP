@@ -81,7 +81,7 @@ public class Main {
             var consumerInitThread = new Thread(() -> {
                 try {
                     Consumer.listen((message, ack) -> {
-                        System.out.printf("Received message:\n %s\n Press enter to acknowledge", message.text);
+                        System.out.printf("Received message:\n%s\nPress enter to acknowledge", message.text);
                         try {
                             reader.readLine();
                         } catch (IOException e) {
