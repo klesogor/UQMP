@@ -78,17 +78,23 @@ public class Main {
             var mult = new Multiplexer(2048, 5402);
             BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
             System.out.println("Starting consumer at port 5402");
-            var consumer = Consumer.listen((message, ack) -> {
-                System.out.printf("Received message:\n %s\n Press enter to acknowledge", message.text);
+            var consumerInitThread = new Thread(() -> {
                 try {
-                    reader.readLine();
-                } catch (IOException e) {
-                    e.printStackTrace();
+                    Consumer.listen((message, ack) -> {
+                        System.out.printf("Received message:\n %s\n Press enter to acknowledge", message.text);
+                        try {
+                            reader.readLine();
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                        ack.acknowledge();
+                    }, new JsonSerializer<>(MessageText.class), mult, new InetSocketAddress("localhost", 5400)).get();
+                } catch (Exception ex) {
+                    ex.printStackTrace();
                 }
-                ack.acknowledge();
-            }, new JsonSerializer<>(MessageText.class), mult, new InetSocketAddress("localhost", 5400));
+            });
+            consumerInitThread.start();
             mult.listen();
-
         }
     }
 

@@ -15,6 +15,7 @@ import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
 import java.util.Random;
+import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.SynchronousQueue;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
@@ -33,11 +34,10 @@ public final class Consumer<T> implements SessionMessageProcessor {
         this.handler = handler;
     }
 
-    public static <T> Consumer<T> listen(MessageConsumer<T> handler, MessageDeserializer<T> deserializer, Multiplexer multiplexer, InetSocketAddress address) {
+    public static <T> CompletableFuture<Consumer<T>> listen(MessageConsumer<T> handler, MessageDeserializer<T> deserializer, Multiplexer multiplexer, InetSocketAddress address) {
         var consumer = new Consumer<>(handler, deserializer, multiplexer, address);
         try {
-            consumer.connection.connect(new ConnectMessage(ConnectionMode.CONSUMER));
-            return consumer;
+            return consumer.connection.connect(new ConnectMessage(ConnectionMode.CONSUMER)).thenApply((absurd) -> consumer);
         } catch (IOException e) {
             e.printStackTrace();
         }

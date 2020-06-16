@@ -72,7 +72,7 @@ public final class ClientSession implements MessageProcessor {
                     return;
                 }
 
-                sessionFeature.completeExceptionally(new TimeoutException("E_UMQP_SESSION_TIMEOT"));
+                sessionFeature.completeExceptionally(new TimeoutException("E_UMQP_SESSION_TIMEOUT"));
             }
         };
     }

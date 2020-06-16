@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0bf05aab-7be9-46f7-8146-044ce73a092c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/UMQP/io/ServerSession.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UMQP/io/ServerSession.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UMQP/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UMQP/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UMQP/consumer/Consumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UMQP/consumer/Consumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UMQP/io/ClientSession.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UMQP/io/ClientSession.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,14 +181,14 @@
       <screen x="65" y="24" width="1855" height="1056" />
     </state>
     <state x="486" y="174" key="SettingsEditor/65.24.1855.1056@65.24.1855.1056" timestamp="1591453952381" />
-    <state x="653" y="367" key="com.intellij.ide.util.TipDialog" timestamp="1592142297057">
+    <state x="653" y="367" key="com.intellij.ide.util.TipDialog" timestamp="1592288688349">
       <screen x="65" y="24" width="1855" height="1056" />
     </state>
-    <state x="653" y="367" key="com.intellij.ide.util.TipDialog/65.24.1855.1056@65.24.1855.1056" timestamp="1592142297057" />
-    <state x="637" y="278" width="710" height="520" key="find.popup" timestamp="1592143329638">
+    <state x="653" y="367" key="com.intellij.ide.util.TipDialog/65.24.1855.1056@65.24.1855.1056" timestamp="1592288688349" />
+    <state x="637" y="278" width="710" height="520" key="find.popup" timestamp="1592289286784">
       <screen x="65" y="24" width="1855" height="1056" />
     </state>
-    <state x="637" y="278" width="710" height="520" key="find.popup/65.24.1855.1056@65.24.1855.1056" timestamp="1592143329638" />
+    <state x="637" y="278" width="710" height="520" key="find.popup/65.24.1855.1056@65.24.1855.1056" timestamp="1592289286784" />
     <state width="600" height="424" key="javadoc.popup" timestamp="1591466096709">
       <screen x="65" y="24" width="1855" height="1056" />
     </state>
